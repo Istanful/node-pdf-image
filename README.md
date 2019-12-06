@@ -49,7 +49,7 @@ var pdfImage = new PDFImage("/tmp/slide.pdf", {
 });
 
 pdfImage.convertFile().then(function (imagePaths) {
-   // /tmp/slide.png 
+   // /tmp/slide.png
 });
 ```
 
@@ -85,5 +85,13 @@ var pdfImage = new PDFImage(pdfPath, {
     "-resize": "2000x2000",
     "-quality": "75"
   }
+});
+```
+
+You can specify what file extension to use with the `convertExtension` option.
+
+```javascript
+var pdfImage = new PDFImage(pdfPath, {
+  convertExtension: "jpg",
 });
 ```
